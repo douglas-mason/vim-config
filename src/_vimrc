@@ -1,0 +1,144 @@
+version 6.0
+if &cp | set nocp | endif
+let s:cpo_save=&cpo
+set cpo&vim
+cnoremap <C-F4> c
+inoremap <C-F4> c
+cnoremap <C-Tab> w
+inoremap <C-Tab> w
+imap <S-Insert> 
+cmap <S-Insert> +
+map! <C-End> <C-End>
+map! <C-Home> <C-Home>
+xnoremap  ggVG
+snoremap  gggHG
+onoremap  gggHG
+nnoremap  gggHG
+vnoremap  "+y
+noremap  
+vnoremap  :update
+nnoremap  :update
+onoremap  :update
+nmap  "+gP
+omap  "+gP
+vnoremap  "+x
+noremap  
+noremap  u
+imap ÎÔ *
+map Q gq
+nmap gx <Plug>NetrwBrowseX
+nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
+onoremap <C-F4> c
+nnoremap <C-F4> c
+vnoremap <C-F4> c
+onoremap <C-Tab> w
+nnoremap <C-Tab> w
+vnoremap <C-Tab> w
+vmap <S-Insert> 
+nmap <S-Insert> "+gP
+omap <S-Insert> "+gP
+vnoremap <C-Insert> "+y
+vnoremap <S-Del> "+x
+vnoremap <BS> d
+nmap <C-End> <C-End>
+vmap <C-End> <C-End>
+nmap <C-Home> <C-Home>
+vmap <C-Home> <C-Home>
+cnoremap  gggHG
+inoremap  gggHG
+inoremap  :update
+inoremap  u
+cmap  +
+inoremap  
+inoremap  u
+vmap ÎØ "*d
+vmap Î× "*d
+vmap ÎÕ "*y
+vmap ÎÔ "-d"*P
+nmap ÎÔ "*P
+let &cpo=s:cpo_save
+unlet s:cpo_save
+set backspace=indent,eol,start
+set backup
+set diffexpr=MyDiff()
+set helplang=En
+set history=50
+set hlsearch
+set incsearch
+set keymodel=startsel,stopsel
+set ruler
+set runtimepath=~/vimfiles,C:\\Program\ Files\ (x86)\\vim/vimfiles,C:\\Program\ Files\ (x86)\\vim\\vim74,C:\\Program\ Files\ (x86)\\vim/vimfiles/after,~/vimfiles/after,~/.vim/bundle/vundle/
+set selection=exclusive
+set selectmode=mouse,key
+set whichwrap=b,s,<,>,[,]
+" vim: set ft=vim :
+:nnoremap <leader>ev :split $MYVIMRC<cr>
+:nnoremap <leader>sov :so $MYVIMRC<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Bundles (Vundle)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              " be iMproved
+filetype off                  " required!
+
+set rtp+=~/vimfiles/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'xolox/vim-notes'
+Bundle 'xolox/vim-misc'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'freitass/todo.txt-vim'
+Bundle "mattn/emmet-vim"
+Bundle "scrooloose/syntastic"
+Bundle "tpope/vim-surround"
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-fugitive'
+
+filetype plugin indent on     " required!
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Map Ctrl N to open Nerd Tree
+map <C-n> :NERDTreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Todo.txt
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"map <C-t> <C-d> :sp C:/Users/douglas.mason/Dropbox/Intermedix/todo/todo.txt
+:nnoremap <leader>todo :split C:/Users/douglas.mason/Dropbox/Intermedix/todo/todo.txt<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim Notes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vmap <Leader>ns :NoteFromSelectedText<CR>
+:let g:notes_directories = ['~/Dropbox/Notes', '~/Dropbox/Notes/IMX']
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax enable
+
+colorscheme desert
+set background=dark
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guioptions-=T
+    set guioptions+=e
+    set t_Co=256
+    set guitablabel=%M\ %t
+    set guifont=Lucida_Console:h12
+endif
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+" Open file in browser
+nnoremap <leader>ch :update<Bar>silent !start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "file://%:p"<CR> 
+" Set Status Line for Fugitive
+set statusline=%{fugitive#statusline()}

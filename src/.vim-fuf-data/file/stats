@@ -1,0 +1,33 @@
+{'word': 'development\arm\ARM SUIT\src\js\utils\navigation.js', 'pattern': 'development\arm\ARM SUIT\src\js\utils\'}
+{'word': 'development\arm\ARM SUIT\src\js\utils\', 'pattern': 'development\arm\ARM SUIT\src\js\'}
+{'word': 'development\arm\ARM SUIT\src\js\', 'pattern': 'development\arm\ARM SUIT\src\'}
+{'word': 'development\arm\ARM SUIT\src\', 'pattern': 'development\arm\ARM SUIT\'}
+{'word': 'development\arm\ARM SUIT\', 'pattern': 'development\arm\a'}
+{'word': 'src\js\utils\navigation.js', 'pattern': '**/nav'}
+{'word': '**navigation:F', 'pattern': '**navigation:F'}
+{'word': 'src\js\data\navigation-data.js', 'pattern': 'src\js\data\'}
+{'word': 'src\js\data\', 'pattern': 'src\js\'}
+{'word': 'src\js\utils\', 'pattern': 'src\js\'}
+{'word': 'src\js\', 'pattern': 'src\'}
+{'word': 'src\js\17', 'pattern': 'src\js\17'}
+{'word': 'navigation.js', 'pattern': 'navigation.js'}
+{'word': 'naviga', 'pattern': 'naviga'}
+{'word': 'test\functional\application_controller_test.rb', 'pattern': '**/appl_con'}
+{'word': 'app\controllers\application_controller.rb', 'pattern': '**/application_con'}
+{'word': 'application_con', 'pattern': 'application_con'}
+{'word': 'todo.txt', 'pattern': 'todo.txt'}
+{'word': 'trunk\app\controllers\billing_reports_controller.rb', 'pattern': 'trunk\app\controllers\geosr'}
+{'word': 'trunk\app\controllers\', 'pattern': 'trunk\app\'}
+{'word': 'trunk\app\', 'pattern': 'trunk\'}
+{'word': 'trunk\', 'pattern': 'tru'}
+{'word': 'gwtprojects\', 'pattern': 'tr'}
+{'word': 'call_sou', 'pattern': 'call_sou'}
+{'word': 'alert', 'pattern': 'alert'}
+{'word': 'trunk\app\con', 'pattern': 'trunk\app\con'}
+{'word': 'call_sources', 'pattern': 'call_sources'}
+{'word': 'vim-note', 'pattern': 'vim-note'}
+{'word': 'App_Code\DAL\PDFSweepDAL.vb', 'pattern': 'App_Code\DAL\pdf'}
+{'word': 'App_Code\DAL\', 'pattern': 'App_Code\da'}
+{'word': 'App_Code\', 'pattern': 'app'}
+{'word': 'PDFSweepDAL', 'pattern': 'PDFSweepDAL'}
+{'word': 'HomePage.aspx', 'pattern': 'HomePage.aspx'}

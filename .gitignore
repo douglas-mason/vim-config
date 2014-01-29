@@ -1,0 +1,7 @@
+backup 01-28-14/
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
