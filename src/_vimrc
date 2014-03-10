@@ -95,6 +95,12 @@ Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-surround"
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'moll/vim-node'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+Bundle 'sidorares/node-vim-debugger'
 
 filetype plugin indent on     " required!
 
@@ -116,6 +122,11 @@ map <C-n> :NERDTreeToggle<CR>
 vmap <Leader>ns :NoteFromSelectedText<CR>
 :let g:notes_directories = ['~/Dropbox/Notes', '~/Dropbox/Notes/IMX']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_jshint_exec='C:\Users\douglas.mason\AppData\Roaming\npm\jshint.cmd'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
@@ -130,7 +141,7 @@ if has("gui_running")
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
-    set guifont=Lucida_Console:h12
+    set guifont=Lucida_Console:h13
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -140,5 +151,13 @@ set encoding=utf8
 set ffs=unix,dos,mac
 " Open file in browser
 nnoremap <leader>ch :update<Bar>silent !start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "file://%:p"<CR> 
+" Debug node files using chrome node debugger
+nnoremap <leader>nd :!node-debug %:p<CR> 
 " Set Status Line for Fugitive
 set statusline=%{fugitive#statusline()}
+"AutoComplete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+:imap <C-Space> <C-x><C-o> 
