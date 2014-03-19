@@ -13,3 +13,4 @@
 "set expandtab       " Expand TABs to spaces
 
 setlocal sw=2 sts=2 et
+inoremap <leader>; <C-o>A;

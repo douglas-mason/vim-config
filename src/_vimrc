@@ -1,79 +1,25 @@
-version 6.0
-if &cp | set nocp | endif
-let s:cpo_save=&cpo
-set cpo&vim
-cnoremap <C-F4> c
-inoremap <C-F4> c
 cnoremap <C-Tab> w
 inoremap <C-Tab> w
-imap <S-Insert> 
-cmap <S-Insert> +
-map! <C-End> <C-End>
-map! <C-Home> <C-Home>
-xnoremap  ggVG
-snoremap  gggHG
-onoremap  gggHG
-nnoremap  gggHG
-vnoremap  "+y
-noremap  
-vnoremap  :update
-nnoremap  :update
-onoremap  :update
-nmap  "+gP
-omap  "+gP
-vnoremap  "+x
-noremap  
-noremap  u
-imap ÎÔ *
-map Q gq
-nmap gx <Plug>NetrwBrowseX
-nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
-onoremap <C-F4> c
-nnoremap <C-F4> c
-vnoremap <C-F4> c
 onoremap <C-Tab> w
 nnoremap <C-Tab> w
 vnoremap <C-Tab> w
-vmap <S-Insert> 
-nmap <S-Insert> "+gP
-omap <S-Insert> "+gP
-vnoremap <C-Insert> "+y
-vnoremap <S-Del> "+x
-vnoremap <BS> d
-nmap <C-End> <C-End>
-vmap <C-End> <C-End>
-nmap <C-Home> <C-Home>
-vmap <C-Home> <C-Home>
-cnoremap  gggHG
-inoremap  gggHG
-inoremap  :update
-inoremap  u
+vnoremap  "+y
 cmap  +
-inoremap  
-inoremap  u
-vmap ÎØ "*d
-vmap Î× "*d
-vmap ÎÕ "*y
-vmap ÎÔ "-d"*P
-nmap ÎÔ "*P
-let &cpo=s:cpo_save
-unlet s:cpo_save
+nmap  "+gP
+omap  "+gP
+vnoremap  "+x
 set backspace=indent,eol,start
 set backup
-set diffexpr=MyDiff()
-set helplang=En
-set history=50
-set hlsearch
-set incsearch
-set keymodel=startsel,stopsel
-set ruler
 set runtimepath=~/vimfiles,C:\\Program\ Files\ (x86)\\vim/vimfiles,C:\\Program\ Files\ (x86)\\vim\\vim74,C:\\Program\ Files\ (x86)\\vim/vimfiles/after,~/vimfiles/after,~/.vim/bundle/vundle/
-set selection=exclusive
-set selectmode=mouse,key
-set whichwrap=b,s,<,>,[,]
+set hlsearch
+set number
 " vim: set ft=vim :
+" edit vimrc file in split
 :nnoremap <leader>ev :split $MYVIMRC<cr>
+" reload vimrc file
 :nnoremap <leader>sov :so $MYVIMRC<cr>
+" run ruby file
+:nnoremap <leader>ru :!ruby %:p<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundles (Vundle)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -101,6 +47,7 @@ Bundle 'moll/vim-node'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'sidorares/node-vim-debugger'
+Bundle 'nelstrom/vim-visual-star-search'
 
 filetype plugin indent on     " required!
 
