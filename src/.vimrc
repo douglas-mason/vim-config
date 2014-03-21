@@ -11,6 +11,7 @@ vnoremap  "+x
 set backspace=indent,eol,start
 set backup
 "set runtimepath=~/vim,~/vimfiles,~/vimfiles/after,~/.vim/bundle/vundle/
+set rtp+=~/vimfiles
 set hlsearch
 set number
 " vim: set ft=vim :
@@ -99,7 +100,7 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 " Open file in browser
-"nnoremap <leader>ch :update<Bar>silent !start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "file://%:p"<CR> 
+nnoremap <leader>ch :update<Bar>silent !google-chrome  "%:p"<CR> 
 " Debug node files using chrome node debugger
 nnoremap <leader>nd :!node-debug %:p<CR> 
 " Set Status Line for Fugitive
