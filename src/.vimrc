@@ -3,6 +3,14 @@ inoremap <C-Tab> w
 onoremap <C-Tab> w
 nnoremap <C-Tab> w
 vnoremap <C-Tab> w
+nnoremap gh <C-W><C-H>
+nnoremap gj <C-W><C-J>
+nnoremap gk <C-W><C-K>
+nnoremap gl <C-W><C-L>
+nnoremap mh <C-W><S-H>
+nnoremap mj <C-W><S-J>
+nnoremap mk <C-W><S-K>
+nnoremap ml <C-W><S-L>
 vnoremap  "+y
 cmap  +
 nmap  "+gP
@@ -51,6 +59,9 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'sidorares/node-vim-debugger'
 Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'vim-scripts/TwitVim'
+Bundle 'tpope/vim-endwise' 
+Bundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on     " required!
 
@@ -91,7 +102,7 @@ if has("gui_running")
     set guioptions+=e
     set t_Co=256
     set guitablabel=%M\ %t
-"    set guifont=Lucida_Console:h13
+    set guifont=Source\ Code\ Pro\ Regular\ 13
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -111,3 +122,4 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 :imap <C-Space> <C-x><C-o> 
+let twitvim_force_ssl = 1
