@@ -114,6 +114,8 @@ set ffs=unix,dos,mac
 nnoremap <leader>ch :update<Bar>silent !google-chrome  "%:p"<CR> 
 " Debug node files using chrome node debugger
 nnoremap <leader>nd :!node-debug %:p<CR> 
+" Run with nodejs
+nnoremap <leader>njs :!nodejs %:p<CR>
 " Set Status Line for Fugitive
 set statusline=%{fugitive#statusline()}
 "AutoComplete
