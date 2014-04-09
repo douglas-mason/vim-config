@@ -20,6 +20,8 @@ set number
 :nnoremap <leader>sov :so $MYVIMRC<cr>
 " run ruby file
 :nnoremap <leader>ru :!ruby %:p<cr>
+" run ruby rspec tests
+:nnoremap <leader>rs :!rspec --format doc %:p<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundles (Vundle)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
