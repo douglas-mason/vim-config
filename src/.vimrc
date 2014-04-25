@@ -62,6 +62,9 @@ Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'vim-scripts/TwitVim'
 Bundle 'tpope/vim-endwise' 
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-markdown'
+Bundle 'junegunn/goyo.vim'
+Bundle 'vim-pandoc-vim-pandoc'
 
 filetype plugin indent on     " required!
 
