@@ -58,6 +58,10 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'sidorares/node-vim-debugger'
 Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'tpope/vim-endwise' 
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-markdown'
+Bundle 'junegunn/goyo.vim'
 
 filetype plugin indent on     " required!
 
