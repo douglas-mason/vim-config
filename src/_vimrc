@@ -11,6 +11,7 @@ nnoremap mh <C-W><S-H>
 nnoremap mj <C-W><S-J>
 nnoremap mk <C-W><S-K>
 nnoremap ml <C-W><S-L>
+nnoremap <C-C><C-A> gg"+yG
 vnoremap  "+y
 cmap  +
 nmap  "+gP
@@ -18,7 +19,7 @@ omap  "+gP
 vnoremap  "+x
 set backspace=indent,eol,start
 set backup
-set runtimepath=~/vimfiles,C:\\Program\ Files\ (x86)\\vim/vimfiles,C:\\Program\ Files\ (x86)\\vim\\vim74,C:\\Program\ Files\ (x86)\\vim/vimfiles/after,~/vimfiles/after,~/.vim/bundle/vundle/
+set runtimepath=~/vimfiles,~/vim/,C:\\Program\ Files\ (x86)\\vim/vimfiles,C:\\Program\ Files\ (x86)\\vim\\vim74,C:\\Program\ Files\ (x86)\\vim/vimfiles/after,~/vimfiles/after,~/.vim/bundle/vundle/
 set hlsearch
 set number
 " vim: set ft=vim :
@@ -51,7 +52,7 @@ Bundle "scrooloose/syntastic"
 Bundle "tpope/vim-surround"
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'moll/vim-node'
 Bundle 'mattn/webapi-vim'
@@ -62,31 +63,115 @@ Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-markdown'
 Bundle 'junegunn/goyo.vim'
+Bundle 'junegunn/limelight.vim'
+"Bundle 'jaxbot/browserlink.vim'
+Bundle 'dhruvasagar/vim-table-mode'
+Bundle 'lpenz/vimcommander'
+Bundle 'kchmck/vim-coffee-script' 
+Bundle 'majutsushi/tagbar'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'groenewege/vim-less'
+Bundle 'othree/html5.vim'
+"Bundle 'oplatek/Conque-Shell'
+Bundle 'kshenoy/vim-signature'
+Bundle 'rking/ag.vim'
+Bundle 'blerins/flattown'
+Bundle 'jordwalke/flatlandia'
+Bundle 'whatyouhide/vim-gotham'
+Bundle 'sickill/vim-sunburst'
+Bundle 'maksimr/vim-jsbeautify' 
+Bundle 'einars/js-beautify' 
+Bundle 'elzr/vim-json'
+"x Bundle 'OmniSharp/omnisharp-vim'
+"x Bundle 'tpope/vim-dispatch'
+Bundle 'ervandew/supertab'
+"Bundle 'OrangeT/vim-csharp'
+Bundle 'mbbill/desertEx'
+Bundle 'tpope/vim-commentary'
+"Bundle 'vim-scripts/dbext.vim'
+Bundle 'sickill/vim-monokai'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-repeat'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'ryanss/vim-hackernews'
 
 filetype plugin indent on     " required!
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => .editorconfig
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:nnoremap <leader>ed :split C:/Users/dmason/.editorconfig<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map Ctrl N to open Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VimCommander
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Map F11 to open VimCommander
+noremap <silent> <F11> :cal VimCommanderToggle()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Todo.txt
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"map <C-t> <C-d> :sp C:/Users/douglas.mason/Dropbox/Intermedix/todo/todo.txt
-:nnoremap <leader>todo :split C:/Users/douglas.mason/Dropbox/Intermedix/todo/todo.txt<cr>
+"map <C-t> <C-d> :sp C:/Users/dmason/Dropbox/todo/todo.txt
+:nnoremap <leader>todo :split C:/Users/dmason/Dropbox/todo/todo.txt<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim Notes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap <Leader>ns :NoteFromSelectedText<CR>
-:let g:notes_directories = ['~/Dropbox/Notes', '~/Dropbox/Notes/IMX']
+:let g:notes_directories = ['~/Dropbox/Notes', '~/Dropbox/Notes/TrueFit']
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim Bookmarks
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:nnoremap <leader>book :split C:/Users/dmason/Dropbox/Bookmarks/development.md<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_jshint_exec='C:\Users\douglas.mason\AppData\Roaming\npm\jshint.cmd'
+let g:syntastic_javascript_jshint_exec='C:\Users\dmason\AppData\Roaming\npm\jshint.cmd'
+:nnoremap <leader>sc :SyntasticCheck<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim Signature (Marks)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader>sig :SignatureToggleSigns<CR>
+let g:SignatureEnableAtStartup = 0
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tagbar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader>tg :TagbarToggle<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => FuzzyFinder
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader>ff :FufCoverageFile<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => CoffeeScript
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader>mo :CoffeeWatch<CR>
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim Airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set laststatus=2
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Indent Guides
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indent_guides_guide_size = 2
+let g:indent_guides_enable_on_vim_startup = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-jsbeautify
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType javascript noremap <buffer> <Leader>jb :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <Leader>jb :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <Leader>jb :call CSSBeautify()<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => typescript-vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:typescript_compiler_options = '-sourcemap'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -121,4 +206,4 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-:imap <C-Space> <C-x><C-o> 
+":imap <C-Space> <C-x><C-o> 
